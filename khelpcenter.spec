@@ -17,6 +17,11 @@ BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(Qt5)
+BuildRequires: cmake(KF5Config)
+BuildRequires: cmake(KF5Init)
+BuildRequires: cmake(KF5KCMUtils)
+BuildRequires: cmake(KF5KHtml)
+BuildRequires: cmake(KF5KDE4Support)
 BuildRequires: ninja
 
 %description
