@@ -29,7 +29,8 @@ KDE Plasma 5 Help Center
 
 %prep
 %setup -qn %{name}-%{plasmaver}
-%cmake -G Ninja
+%cmake -G Ninja \
+	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %build
 ninja -C build
