@@ -3,7 +3,7 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 
 Name: khelpcenter
-Version: 5.1.2
+Version: 5.1.95
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Plasma 5 Help Center
@@ -46,12 +46,13 @@ cat *.lang >all.lang
 %{_bindir}/khelpcenter
 %{_libdir}/libexec/*
 %{_libdir}/libkdeinit5_khelpcenter.so
-%{_datadir}/applications/Help.desktop
+%{_datadir}/applications/org.kde.Help.desktop
 %{_datadir}/config.kcfg/khelpcenter.kcfg
 %{_datadir}/dbus-1/interfaces/*
 %{_datadir}/khelpcenter
 %{_datadir}/kservices5/khelpcenter.desktop
 %{_datadir}/kxmlgui5/khelpcenter
+%{_datadir}/kde4/services/khelpcenter.desktop
 %doc %{_docdir}/HTML/en/fundamentals
 %doc %{_docdir}/HTML/en/khelpcenter
 %doc %{_docdir}/HTML/en/onlinehelp
