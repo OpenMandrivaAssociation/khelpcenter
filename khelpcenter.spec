@@ -53,6 +53,6 @@ cat *.lang >all.lang
 %{_datadir}/kservices5/khelpcenter.desktop
 %{_datadir}/kxmlgui5/khelpcenter
 %{_datadir}/kde4/services/khelpcenter.desktop
-%doc %{_docdir}/HTML/en/fundamentals
-%doc %{_docdir}/HTML/en/khelpcenter
-%doc %{_docdir}/HTML/en/onlinehelp
+%doc %{_docdir}/HTML/*/fundamentals
+%doc %{_docdir}/HTML/*/khelpcenter
+%doc %{_docdir}/HTML/*/onlinehelp
