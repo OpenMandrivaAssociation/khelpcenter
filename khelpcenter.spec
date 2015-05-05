@@ -51,3 +51,4 @@ cat *.lang >all.lang
 %doc %{_docdir}/HTML/*/fundamentals
 %doc %{_docdir}/HTML/*/khelpcenter
 %doc %{_docdir}/HTML/*/onlinehelp
+%doc %{_docdir}/HTML/*/glossary
