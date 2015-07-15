@@ -4,7 +4,7 @@
 
 Name: khelpcenter
 Version: 5.3.2
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Plasma 5 Help Center
 URL: http://kde.org/
@@ -18,6 +18,7 @@ BuildRequires: cmake(KF5Init)
 BuildRequires: cmake(KF5KCMUtils)
 BuildRequires: cmake(KF5KHtml)
 BuildRequires: cmake(KF5KDE4Support)
+Conflicts:	kde-runtime < 1:15.04.3-3
 
 %description
 KDE Plasma 5 Help Center.
