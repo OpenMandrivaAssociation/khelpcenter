@@ -33,12 +33,9 @@ KDE Plasma 5 Help Center.
 %install
 %ninja_install -C build
 
-%find_lang khelpcenter
-%find_lang htmlsearch
-%find_lang kcmhtmlsearch
-cat *.lang >all.lang
+%find_lang %{name}
 
-%files -f all.lang
+%files -f %{name}.lang
 %{_bindir}/khelpcenter
 %{_libdir}/libexec/*
 %{_libdir}/libkdeinit5_khelpcenter.so
