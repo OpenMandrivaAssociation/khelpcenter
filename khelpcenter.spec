@@ -9,15 +9,26 @@ Source0: http://download.kde.org/%{stable}/applications/%{plasmaver}/src/%{name}
 Summary: KDE Plasma 5 Help Center
 URL: http://kde.org/
 License: GPL
-Group: System/Libraries
+Group: Graphical desktop/KDE
 BuildRequires: pkgconfig(Qt5Core)
+BuildRequires: pkgconfig(Qt5DBus)
+BuildRequires: pkgconfig(Qt5Widgets)
+BuildRequires: pkgconfig(Qt5Xml)
+BuildRequires: pkgconfig(xapian-core)
+BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(ECM)
+BuildRequires: cmake(KF5Archive)
+BuildRequires: cmake(KF5Bookmarks)
 BuildRequires: cmake(KF5Config)
+BuildRequires: cmake(KF5CoreAddons)
+BuildRequires: cmake(KF5DBusAddons)
+BuildRequires: cmake(KF5DocTools)
+BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5Init)
-BuildRequires: cmake(KF5KCMUtils)
 BuildRequires: cmake(KF5KHtml)
-BuildRequires: cmake(KF5KDE4Support)
+BuildRequires: cmake(KF5Service)
+BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(Grantlee5)
 Conflicts:	kde-runtime < 1:15.04.3-3
 
