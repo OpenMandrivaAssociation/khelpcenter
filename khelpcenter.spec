@@ -3,9 +3,9 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 
 Name: khelpcenter
-Version: 16.04.0
+Version: 5.6.4
 Release: 1
-Source0: http://download.kde.org/%{stable}/applications/%{plasmaver}/src/%{name}-%{version}.tar.xz
+Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Plasma 5 Help Center
 URL: http://kde.org/
 License: GPL
@@ -44,8 +44,9 @@ KDE Plasma 5 Help Center.
 
 %install
 %ninja_install -C build
+%find_lang khelpcenter || touch khelpcenter.lang
 
-%files
+%files -f khelpcenter.lang
 %{_sysconfdir}/xdg/khelpcenter.categories
 %{_bindir}/khelpcenter
 %{_libdir}/libexec/*
@@ -57,5 +58,6 @@ KDE Plasma 5 Help Center.
 %{_datadir}/kxmlgui5/khelpcenter
 %{_datadir}/kde4/services/khelpcenter.desktop
 %doc %{_docdir}/HTML/*/fundamentals
+%doc %{_docdir}/HTML/*/glossary
 %doc %{_docdir}/HTML/*/khelpcenter
 %doc %{_docdir}/HTML/*/onlinehelp
