@@ -3,7 +3,7 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 
 Name: khelpcenter
-Version: 5.6.4.1
+Version: 5.6.4
 Release: 1
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Plasma 5 Help Center
@@ -36,7 +36,7 @@ Conflicts:	kde-runtime < 1:15.04.3-3
 KDE Plasma 5 Help Center.
 
 %prep
-%setup -q
+%setup -qn %{name}-%{plasmaver}
 %cmake_kde5
 
 %build
