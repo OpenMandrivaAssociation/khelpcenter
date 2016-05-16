@@ -36,7 +36,7 @@ Conflicts:	kde-runtime < 1:15.04.3-3
 KDE Plasma 5 Help Center.
 
 %prep
-%setup -qn %{name}-%{plasmaver}
+%setup -q
 %cmake_kde5
 
 %build
