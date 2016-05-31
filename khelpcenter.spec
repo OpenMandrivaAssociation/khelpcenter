@@ -1,11 +1,10 @@
 %define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define plasmaver %(echo %{version} |cut -d. -f1-3)
-
 Name: khelpcenter
-Version: 5.6.4
+Version: 16.04.1
 Release: 1
-Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
+# was part of plasma but moved to applications in 16.04
+Source0: http://download.kde.org/%{stable}/applications/%{version}/%{name}-%{version}.tar.xz
 Summary: KDE Plasma 5 Help Center
 URL: http://kde.org/
 License: GPL
@@ -36,7 +35,7 @@ Conflicts:	kde-runtime < 1:15.04.3-3
 KDE Plasma 5 Help Center.
 
 %prep
-%setup -qn %{name}-%{plasmaver}
+%setup -qn %{name}-%{version}
 %cmake_kde5
 
 %build
@@ -58,6 +57,5 @@ KDE Plasma 5 Help Center.
 %{_datadir}/kxmlgui5/khelpcenter
 %{_datadir}/kde4/services/khelpcenter.desktop
 %doc %{_docdir}/HTML/*/fundamentals
-%doc %{_docdir}/HTML/*/glossary
 %doc %{_docdir}/HTML/*/khelpcenter
 %doc %{_docdir}/HTML/*/onlinehelp
