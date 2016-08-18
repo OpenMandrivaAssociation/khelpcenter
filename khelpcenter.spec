@@ -1,10 +1,10 @@
 %define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name: khelpcenter
-Version: 16.04.3
+Version: 16.08.0
 Release: 1
 # was part of plasma but moved to applications in 16.04
-Source0: http://download.kde.org/%{stable}/applications/%{version}/%{name}-%{version}.tar.xz
+Source0: http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Summary: KDE Plasma 5 Help Center
 URL: http://kde.org/
 License: GPL
@@ -50,6 +50,7 @@ KDE Plasma 5 Help Center.
 %{_bindir}/khelpcenter
 %{_libdir}/libexec/*
 %{_libdir}/libkdeinit5_khelpcenter.so
+%{_datadir}/appdata/org.kde.Help.appdata.xml
 %{_datadir}/applications/org.kde.Help.desktop
 %{_datadir}/config.kcfg/khelpcenter.kcfg
 %{_datadir}/khelpcenter
