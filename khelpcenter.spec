@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name: khelpcenter
-Version: 17.04.2
+Version: 17.04.3
 Release: 1
 # was part of plasma but moved to applications in 16.04
 Source0: http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
