@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name: khelpcenter
-Version:	19.04.3
+Version:	19.07.80
 Release:	1
 # was part of plasma but moved to applications in 16.04
 Source0: http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
@@ -46,7 +46,7 @@ KDE Plasma 5 Help Center.
 %find_lang khelpcenter5 || touch khelpcenter5.lang
 
 %files -f khelpcenter5.lang
-%{_sysconfdir}/xdg/khelpcenter.categories
+%{_datadir}/qlogging-categories5/khelpcenter.categories
 %{_bindir}/khelpcenter
 %{_libdir}/libexec/*
 %{_libdir}/libkdeinit5_khelpcenter.so
