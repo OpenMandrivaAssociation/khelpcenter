@@ -1,7 +1,10 @@
+# Workaround for clang 12 bug (lld crash at link time)
+%global _disable_lto 1
+
 %define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name: khelpcenter
-Version:	20.12.3
+Version:	21.03.80
 Release:	1
 # was part of plasma but moved to applications in 16.04
 Source0: http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
