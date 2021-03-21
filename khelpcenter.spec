@@ -1,6 +1,3 @@
-# Workaround for clang 12 bug (lld crash at link time)
-%global _disable_lto 1
-
 %define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name: khelpcenter
