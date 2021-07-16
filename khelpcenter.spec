@@ -1,6 +1,6 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name: khelpcenter
-Version:	21.04.2
+Version:	21.07.80
 Release:	1
 # was part of plasma but moved to applications in 16.04
 Source0: http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
@@ -48,13 +48,11 @@ KDE Plasma 5 Help Center.
 %{_datadir}/qlogging-categories5/khelpcenter.categories
 %{_bindir}/khelpcenter
 %{_libdir}/libexec/*
-%{_libdir}/libkdeinit5_khelpcenter.so
 %{_datadir}/metainfo/*.xml
 %{_datadir}/applications/org.kde.Help.desktop
 %{_datadir}/config.kcfg/khelpcenter.kcfg
 %{_datadir}/khelpcenter
 %{_datadir}/kservices5/khelpcenter.desktop
-%{_datadir}/kxmlgui5/khelpcenter
 %{_datadir}/kde4/services/khelpcenter.desktop
 %doc %{_docdir}/HTML/*/fundamentals
 %doc %{_docdir}/HTML/*/khelpcenter
