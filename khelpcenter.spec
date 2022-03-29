@@ -50,6 +50,7 @@ KDE Plasma 5 Help Center.
 %{_libdir}/libexec/*
 %{_datadir}/metainfo/*.xml
 %{_datadir}/applications/org.kde.khelpcenter.desktop
+%{_datadir}/dbus-1/services/org.kde.khelpcenter.service
 %{_datadir}/config.kcfg/khelpcenter.kcfg
 %{_datadir}/khelpcenter
 %{_datadir}/kservices5/khelpcenter.desktop
