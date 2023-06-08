@@ -1,6 +1,6 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name: khelpcenter
-Version:	23.04.1
+Version:	23.04.2
 Release:	1
 # was part of plasma but moved to applications in 16.04
 Source0: http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
