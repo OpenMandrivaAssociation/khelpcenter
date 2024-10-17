@@ -5,7 +5,7 @@ Release:	1
 # was part of plasma but moved to applications in 16.04
 Source0: http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Summary: KDE Plasma 5 Help Center
-URL: http://kde.org/
+URL: https://kde.org/
 License: GPL
 Group: Graphical desktop/KDE
 BuildRequires: pkgconfig(Qt5Core)
