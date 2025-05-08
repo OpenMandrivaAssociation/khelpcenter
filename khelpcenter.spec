@@ -3,14 +3,13 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e 's,/,-,g')
 
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-Name: plasma6-khelpcenter
-Version:	25.04.0
+Name:		khelpcenter
+Version:	25.04.1
 Release:	%{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/system/khelpcenter/-/archive/%{gitbranch}/khelpcenter-%{gitbranchd}.tar.bz2
 %else
-# was part of plasma but moved to applications in 16.04
-Source0: http://download.kde.org/%{stable}/release-service/%{version}/src/khelpcenter-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/khelpcenter-%{version}.tar.xz
 %endif
 Summary: KDE Plasma 6 Help Center
 URL: https://kde.org/
@@ -41,24 +40,16 @@ BuildRequires: cmake(KF6TextTemplate)
 BuildRequires: cmake(KF6Completion)
 BuildRequires: cmake(KF6KIO)
 BuildRequires: cmake(KF6XmlGui)
+# Renamed after 6.0 2025-05-09
+%rename plasma6-khelpcenter
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 KDE Plasma 6 Help Center.
 
-%prep
-%autosetup -p1 -n khelpcenter-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang khelpcenter --with-html --all-name || touch khelpcenter.lang
-
-%files -f khelpcenter.lang
+%files -f %{name}.lang
 %{_datadir}/qlogging-categories6/khelpcenter.categories
 %{_bindir}/khelpcenter
 %{_libdir}/libexec/*
