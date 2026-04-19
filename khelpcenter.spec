@@ -4,8 +4,8 @@
 
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name:		khelpcenter
-Version:	25.12.3
-Release:	%{?git:0.%{git}.}2
+Version:	26.04.0
+Release:	%{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/system/khelpcenter/-/archive/%{gitbranch}/khelpcenter-%{gitbranchd}.tar.bz2
 %else
